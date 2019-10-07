@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/blanket.css}"/>
+    <title>Ansøgning om dagpenge</title>
+  <script>
+      Cookies.set('theme', 'green');
+
+  </script>
+
+</head>
+<body onload="myFunction()">
+<script>src='https://cdnjs.cloudflare.com/ajax/libs/jquery/.min.js'</script>
+    <div class = "left">
+        <h4>Husk at læse vejledningen, <br> får du udfylder blanketten</h4>
+         <a  href="/Vejledning" >Vejledning</a>
+    </div>
+    <div class = "right">
+        <h2>Ansøgning om dagpenge under <br>arbejdssøgning i et andet EØS-land</h2>
+        <h2>(dokument PD U2)</h2>
+    </div>
+<div class="form">
+    <form class="info" >
+       Navn: <input type="text" name="name"/>
+        <br>
+       CPR-Nummer: <input type="text" name="CPR"/>
+       <br>
+        Adresse i Danmark:
+        <input type="text" name="adressdk" placeholder="adress"/>
+        <input type="text" name="postnrdk" placeholder="postNr"/>
+        <input type="text" name="bydk" placeholder="by"/>
+        <br>
+        Statsborgerskab:
+        <input type="text" name="statsborgerskab"/>
+        <br>
+
+        <br>
+
+    Hvilet EØS-land ønsker du at søge arbejde i?:
+    <input type="text" name="eøsland">
+    <br>
+    Nøjagtig afrejse- dato fra Danmark:
+    <input type="date" name="afrejse">  <br>
+    Har du tidligere fået dagpenge under arbejdssøgning i udlandet?:
+    <input type="radio" name="dagpenge" value="yes" > ja
+    <input type="radio" name="dagpenge" value="yes"> nej<br>
+    Adresse i det andet EØS-land (hvis kendt):
+    <input type="text" name="adresseu" placeholder="Adresse">
+    <input type="text" name="postnreu" placeholder="Postnr">
+    <input type="text" name="byeu" placeholder="By">    <br>
+
+    <br>
+    Seneste arbejdsgivers navn:
+    <input type="text" name="arbejdsgiver">
+    <br>
+    <input type="text" name="adressar" placeholder="Adresse">
+    <input type="text" name="postnrar" placeholder="Postnr">
+    <input type="text" name="Byar" placeholder="By">
+    <br>
+    Arbejds-periode:
+    fra <input type="date" name="fra" >
+    til <input type="date" name="til">
+    <br>
+    Fik du eller arbejdsgiveren tilskud til din løn?:
+    <input type="radio" name="tilskud" value="yes" > ja
+    <input type="radio" name="tilskud" value="yes"> nej<br>
+    Har du selv sagt op?:
+    <input type="radio" name="opsagt" value="yes" > ja
+    <input type="radio" name="opsagt" value="yes"> nej<br>
+    Årsag til arbejdsophør?:
+    <textarea name="aarsag" rows="2" cols="50">skriv her</textarea>
+    <br>
+    Skriv dine eventuelle bemærkninger:
+    <textarea name="kommentar" rows="5" cols="100">skriv her</textarea>
+    </form>
+
+</div>
+    <div class="underskift">
+        <p>
+            Jeg erklærer på tro og love, at oplysningerne er rigtige, jf. § 86, stk. 1, og § 87, stk. 1 og 2, i lov om arbejdsløshedsforsikring mv. <br> Jeg forpligter mig til at oplyse a-kassen om ændringer, der kan have betydning for dokumentet.<br>Jeg erklærer også, at jeg har læst vejledningen.
+            <br>Oplys straks a-kassen om alt, der har betydning for udstedelse af dokumentet.
+        </p>
+        <form class="underskift">
+            Dato:
+            <input type="date" name="datounderskift">
+            Underskift:
+            <input type="text" name="underskift" >
+            <input type="submit" value="Send">
+
+        </form>
+    </div>
+
+
+
+<script>
+    function myFunction() {
+        alert("cookie");
+    }
+</script>
+
+</body>
+</html>
